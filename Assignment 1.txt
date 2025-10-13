@@ -1,0 +1,66 @@
+Ques1. Explain the difference between frontend, backend, and full-stack development with suitable real-world examples.
+
+Ans1.
+Frontend: Deals with what we see and interact with like building using HTML, CSS, JS.
+Example: The layout, buttons, and menus of Amazon’s homepage.
+
+Backend: Manages data and logic behind the scenes — uses Node.js, Python, Java, etc.
+Example: When we log in, the backend verifies your password from the database by performing hashing in password(eg. bcrypt library ).
+
+Full-Stack: Handles both frontend and backend parts of an app.
+Example: A developer who builds both the webpage and the login system.
+
+Ques3. Describe how a browser requests and displays a web page from a web server.
+
+Ans3.
+1-> User enters a website URL.
+2-> Browser sends an HTTP request to the server.
+3-> Server processes the request and sends back the HTML, CSS, and JS files.
+(Console the webpage to see the html content and go to network tab to see the js files there..)
+4-> Browser renders the content on the screen for the user.
+
+Ques4. Identify and list the tools required to set up a web development environment. Explain the purpose of each.
+
+Ans4.
+VS Code -> Code editor for writing and testing web files
+Browser (Chrome) -> To view and test webpages
+Git & GitHub -> For version control and storing projects
+Node.js -> For running JavaScript outside the browser
+Live Server (VS Code Extension) -> To instantly preview HTML pages.
+
+Ques5. Explain what a web server is and give examples of commonly used servers.
+
+Ans5.
+A web server stores, processes, and delivers web pages to clients upon request.
+Examples: Apache, Nginx, Microsoft IIS, LiteSpeed.
+
+Ques6. Define the roles of a frontend developer, backend developer, and database administrator
+in a project.
+
+Ans6.
+Frontend Developer:- Codes the visual, interactive parts of the website using HTML, CSS, and JS. Focuses on user experience.
+
+Backend Developer:- Writes server-side logic and APIs using languages like Python or Java or JS. Manages data storage and retrieval.
+
+Database Administrator (DBA):- Manages, secures, and maintains the database system (e.g., MongoDB). Ensures data is stored efficiently and is available.
+
+Ques8. Explain the difference between static and dynamic websites. Provide an example of each.
+
+Ans8.
+Static Site:- Same fixed content for every user. Built only with HTML and CSS.
+Example: A restaurant's brochure website with a fixed menu and contact details.
+
+Dynamic Site:- Content changes based on user interaction or data. Uses backend programming.
+Example: Facebook, where your news feed is unique to you.
+
+Ques9. Research and list five web browsers. Explain how rendering engines differ between them.
+
+Ans9.
+Browser                          ------->	Rendering Engine
+Chrome, Edge, Opera              ------->	Blink
+Safari                           ------->	WebKit
+Firefox	                         ------->   Gecko
+Internet Explorer                ------->	Trident
+
+Diff: The rendering engine is responsible for converting HTML/CSS into the visual page you see. Different engines can cause slight variations in how a website is displayed.
+
