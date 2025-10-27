@@ -1,0 +1,64 @@
+/* centered contact form with focus style */
+html,
+body {
+    height: 100%;
+    margin: 0
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background: #f4f6fb
+}
+
+.center-wrap {
+    width: 100%;
+    max-width: 560px;
+    padding: 1rem
+}
+
+.contact-form {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(11, 118, 246, 0.06)
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-top: 0
+}
+
+.contact-form label {
+    display: block;
+    margin: 0.6rem 0;
+    font-size: 0.95rem
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #d7dbe7;
+    border-radius: 6px;
+    outline: none;
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.02)
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0b76f6;
+    box-shadow: 0 0 0 3px rgba(11, 118, 246, 0.08)
+}
+
+.contact-form button {
+    margin-top: 0.8rem;
+    width: 100%;
+    padding: 0.7rem;
+    background: #0b76f6;
+    color: #fff;
+    border: none;
+    border-radius: 6px
+}

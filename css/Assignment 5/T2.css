@@ -1,0 +1,115 @@
+/* base styles for sections with full-width backgrounds and gradients */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: Segoe UI, Arial, sans-serif;
+    background: #fff;
+    color: #112
+}
+
+header {
+    padding: 1rem 2rem;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6
+}
+
+nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600
+}
+
+/* full-width background sections */
+.fullbg {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 1rem;
+}
+
+/* using fixed background-attachment for parallax effect */
+.intro {
+    background-image: url('https://media.istockphoto.com/id/155096944/photo/taj-mahal-sunrise.jpg?s=612x612&w=0&k=20&c=SR-5FqC8K5cMJwUbLa-UQGAvZdJ48rLrdg63bBYpsDU=');
+    background-attachment: fixed
+}
+
+.gradient {
+    background: linear-gradient(135deg, rgba(11, 118, 246, 0.85), rgba(3, 155, 125, 0.85));
+    background-attachment: fixed
+}
+
+.radial {
+    background: radial-gradient(circle at 20% 20%, rgba(255, 200, 80, 0.85), rgba(200, 50, 150, 0.85));
+}
+
+/* inner content box to show spacing, margin and border */
+.inner {
+    max-width: 900px;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+}
+
+/* normal content section */
+.content {
+    background: #fafafa;
+    color: #222;
+    padding: 3rem 1rem
+}
+
+.content .inner {
+    background: transparent;
+    color: inherit;
+    border: 1px solid #eee;
+    padding: 1.5rem
+}
+
+/* heading sizes and weights */
+h1 {
+    font-size: 2rem;
+    font-weight: 800
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem
+}
+
+/* spacing via padding and margin */
+p {
+    margin: 0.5rem 0 0 0;
+    line-height: 1.6;
+    padding-right: 1rem
+}
+
+/* footer */
+footer {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #e6e6e6;
+    margin-top: 1rem
+}
+
+/* responsive adjustments */
+@media (max-width:700px) {
+    .fullbg {
+        min-height: 40vh
+    }
+
+    h1 {
+        font-size: 1.5rem
+    }
+}

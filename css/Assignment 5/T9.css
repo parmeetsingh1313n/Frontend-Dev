@@ -1,0 +1,48 @@
+/* multi-column article with floated image */
+body {
+    background: #fafafa;
+    font-family: Georgia, serif;
+    margin: 2rem
+}
+
+.mag {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 0 auto
+}
+
+.span-all {
+    column-span: all;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem
+}
+
+.cols {
+    column-count: 3;
+    column-gap: 2rem;
+    column-rule: 1px solid #eee;
+    text-align: justify
+}
+
+.float-img {
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 0.6rem;
+    border-radius: 6px
+}
+
+/* image float fallback on small screens */
+@media (max-width:800px) {
+    .cols {
+        column-count: 1
+    }
+
+    .float-img {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem
+    }
+}

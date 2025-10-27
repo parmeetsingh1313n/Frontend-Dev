@@ -1,0 +1,113 @@
+/* uses px, em, %, vh, rem */
+:root {
+    --bg: #f4f7fb;
+    --accent: #0b76f6;
+    --text: #1b2430;
+    --footer: #0f1720;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+/* fixed header */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e1e6ef;
+    z-index: 10;
+}
+
+/* header items */
+.brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--accent);
+}
+
+.main-nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.95rem
+}
+
+/* main content spacing to avoid header overlap */
+.main {
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 120px);
+}
+
+/* hero layout */
+.hero {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    max-width: 1000px;
+    padding: 2rem;
+}
+
+.profile {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 8px 18px rgba(11, 118, 246, 0.12);
+}
+
+.bio h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.6rem;
+}
+
+.bio p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* footer stuck to bottom using flex at body level is another way*/
+.site-footer {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--footer);
+    color: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* responsive */
+@media (max-width:600px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav {
+        display: none;
+    }
+}

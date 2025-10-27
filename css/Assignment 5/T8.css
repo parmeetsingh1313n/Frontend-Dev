@@ -1,0 +1,72 @@
+/* dashboard with sidebar and fixed header */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb
+}
+
+.dash-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: #0b76f6;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: 5
+}
+
+.dash {
+    display: flex;
+    margin-top: 56px;
+    min-height: calc(100vh - 56px)
+}
+
+.sidebar {
+    width: 220px;
+    background: #fff;
+    border-right: 1px solid #e6e9f2;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03)
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 0.6rem 0;
+    color: #223
+}
+
+.content {
+    flex: 1;
+    padding: 1.25rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-content: flex-start
+}
+
+.box {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    flex: 1 1 calc(50% - 1rem)
+}
+
+/* sidebar full height natural behavior */
+@media (max-width:800px) {
+    .dash {
+        flex-direction: column
+    }
+
+    .sidebar {
+        width: 100%
+    }
+
+    .box {
+        flex: 1 1 100%
+    }
+}
