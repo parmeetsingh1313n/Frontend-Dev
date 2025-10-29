@@ -1,0 +1,55 @@
+/* T5_selectors.css - demo of attribute selectors, pseudo-classes and combinators */
+
+/* attribute selector: inputs of type text */
+input[type="text"] {
+    border: 2px solid #ccc;
+    padding: 6px;
+    border-radius: 4px;
+    display: block;
+    margin: 8px 0
+}
+
+/* attribute prefix selector: links that start with https */
+a[href^="https"] {
+    color: seagreen;
+    font-weight: 600
+}
+
+/* pseudo-class: hover */
+a:hover {
+    text-decoration: underline
+}
+
+/* pseudo-class: focus */
+input:focus {
+    outline: 3px solid rgba(11, 118, 246, 0.12)
+}
+
+/* nth-child */
+ol li:nth-child(odd) {
+    background: #f9f9f9;
+    padding: 6px
+}
+
+/* pseudo-elements */
+.links li::before {
+    content: "• ";
+    color: #ff7a59
+}
+
+/* combinator: direct child > (style only top-level list items) */
+main>ul {
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 0
+}
+
+/* adjacent sibling + style item immediately after h1 if present */
+header+main {
+    padding: 16px
+}
+
+/* general sibling ~ style any ol that follows lists */
+ul~ol {
+    margin-top: 12px
+}

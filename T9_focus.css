@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Arial;
+    background: #f3f6f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0
+}
+
+.form-wrap form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    width: 320px
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 0.95rem
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #e1e6ef;
+    border-radius: 6px;
+    outline: none
+}
+
+input:focus,
+textarea:focus {
+    outline: 3px solid rgba(11, 118, 246, 0.14);
+    outline-offset: 4px
+}
+
+button {
+    margin-top: 8px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: #0b76f6;
+    color: #fff
+}

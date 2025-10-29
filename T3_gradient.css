@@ -1,0 +1,60 @@
+/* T3_gradient.css - linear and radial gradients; one fixed background */
+* {
+    box-sizing: border-box;
+    margin: 0
+}
+
+body {
+    font-family: Arial;
+    color: #fff
+}
+
+.fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: #111;
+    padding: 12px;
+    text-align: center;
+    z-index: 5
+}
+
+header {
+    top: 0
+}
+
+footer {
+    bottom: 0
+}
+
+/* spacing to avoid overlap with fixed header/footer */
+main {
+    padding-top: 70px;
+    padding-bottom: 60px
+}
+
+/* linear gradient with fixed background-attachment for parallax-like feel */
+.linear {
+    min-height: 60vh;
+    background: linear-gradient(135deg, #0b76f6 0%, #3ad59f 100%);
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.radial {
+    min-height: 50vh;
+    background: radial-gradient(circle at 20% 20%, #ffd166, #ef476f);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+/* inner box */
+.inner {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center
+}

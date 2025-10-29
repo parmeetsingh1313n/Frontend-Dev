@@ -1,0 +1,56 @@
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #fff;
+    padding: 30px;
+    color: #222
+}
+
+.text {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8
+}
+
+h1 {
+    font-size: 2rem;
+    letter-spacing: 0.4px;
+    margin-bottom: 12px;
+    text-align: center
+}
+
+p {
+    font-size: 1rem;
+    margin: 10px 0
+}
+
+p::first-line {
+    font-weight: 700
+}
+
+p::first-letter {
+    font-size: 2.2rem;
+    color: #0b76f6;
+    margin-right: 6px;
+    float: left;
+    line-height: 1
+}
+
+mark {
+    background: #ffef9a;
+    padding: 0 .15rem;
+    color: #222
+}
+
+strong {
+    color: #0b76f6
+}
+
+em {
+    font-style: italic;
+    color: #7a7a7a
+}
+
+.note {
+    font-weight: 600;
+    letter-spacing: 0.6px
+}

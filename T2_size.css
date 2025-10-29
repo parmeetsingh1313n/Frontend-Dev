@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Segoe UI, Arial;
+    margin: 0;
+    color: #222
+}
+
+header,footer {
+    text-align: center;
+    padding: 12px;
+    background: #fafafa
+}
+
+.stage {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 20px
+}
+
+/* boxes */
+.box {
+    background: #fff;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center
+}
+
+/* specific sizes */
+.a {
+    width: 200px;
+    height: 200px;
+    background: #e8f5e9
+}
+
+.b {
+    width: 50%;
+    min-width: 160px;
+    height: 120px;
+    background: #e3f2fd;
+    overflow: auto
+}
+
+.c {
+    width: 180px;
+    height: 40vh;
+    background: #fff3e0;
+    max-width: 320px
+}
+
+/* demonstrate min-height and max-width */
+.b {
+    min-height: 80px;
+    max-width: 420px
+}
+
+/* center vertically/horizontally on small screens */
+@media(max-width:700px) {
+    .stage {
+        flex-direction: column
+    }
+}
