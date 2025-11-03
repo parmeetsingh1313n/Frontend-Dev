@@ -1,0 +1,51 @@
+body {
+    font-family: Arial;
+    background: #f3f6fb;
+    margin: 0;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.panel {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, .06);
+    background: linear-gradient(180deg, #fff, #f7fbff);
+}
+
+/* components */
+.search {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #dfe6f2;
+}
+
+.search:focus {
+    outline: 3px solid rgba(11, 118, 246, .12);
+}
+
+/* select and button */
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    background: #0b76f6;
+    color: #fff;
+    cursor: pointer;
+}
+
+select {
+    padding: 8px;
+    border-radius: 8px;
+}

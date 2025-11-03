@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    background: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.box {
+    width: 200px;
+    padding: 20px;
+    border: 10px solid #007bff;
+    background: #cfe2ff;
+}
+
+.border-box {
+    box-sizing: border-box;
+    background: #d4edda;
+}
+
+.note {
+    margin-top: 30px;
+    color: #555;
+}

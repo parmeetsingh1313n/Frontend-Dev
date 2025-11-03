@@ -1,0 +1,39 @@
+/* element selector */
+p {
+    line-height: 1.45;
+    margin: 8px 0;
+}
+
+/* class selector */
+.highlight {
+    background: #fff3cd;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* id selector */
+#unique {
+    border-left: 4px solid #0b76f6;
+    padding: 8px;
+    background: #f0f8ff;
+}
+
+/* attribute selector */
+a[data-type="demo"] {
+    text-decoration: none;
+    color: #0b76f6;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.parent>p {
+    font-weight: 600;
+}
+
+.parent p+p {
+    opacity: 0.9;
+}
+
+.parent p~.sibling {
+    color: #3a3a3a;
+}

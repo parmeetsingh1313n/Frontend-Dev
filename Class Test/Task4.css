@@ -1,0 +1,63 @@
+/* Element selector */
+p {
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Class selector */
+.highlight {
+    background-color: #ffeb3b;
+    padding: 5px;
+}
+
+/* ID selector */
+#special {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Attribute selector */
+a[title] {
+    color: green;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+a[title]:hover {
+    text-decoration: underline;
+}
+
+/* Descendant selector (targets p inside .parent) */
+.parent p {
+    color: darkorange;
+}
+
+/* Child selector example */
+.parent>span {
+    color: purple;
+}
+
+/* Adjacent sibling selector (+) */
+.parent+.next {
+    color: crimson;
+}
+
+/* General sibling selector (~) */
+.parent~p {
+    font-style: italic;
+}
+
+body {
+    background: #f9f9f9;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+}
+
+header, footer {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}

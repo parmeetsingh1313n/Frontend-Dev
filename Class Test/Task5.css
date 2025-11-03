@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* ---------- Button Types ---------- */
+.primary {
+    background: #007bff;
+    color: white;
+}
+
+.secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.outline {
+    background: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+.disabled {
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* ---------- Hover States ---------- */
+button:hover:not(.disabled) {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.primary:hover {
+    background: #0056b3;
+}
+
+.secondary:hover {
+    background: #545b62;
+}
+
+.outline:hover {
+    background: #007bff;
+    color: white;
+}
+
+button:active:not(.disabled) {
+    transform: scale(0.98);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+    outline: 3px solid #80bdff;
+    outline-offset: 2px;
+}

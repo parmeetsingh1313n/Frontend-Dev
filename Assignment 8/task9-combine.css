@@ -1,0 +1,41 @@
+body {
+    font-family: Arial;
+    background: #f6f8fb;
+    margin: 0;
+    padding: 32px;
+}
+
+.examples {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.combo {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    background: #0b76f6;
+    color: #fff;
+    cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s, background .18s;
+}
+
+.combo:hover {
+    transform: scale(1.05);
+    background: #095ec3;
+    box-shadow: 0 12px 30px rgba(11, 118, 246, .16);
+}
+
+.combo:active {
+    transform: scale(.99);
+    box-shadow: 0 6px 15px rgba(11, 118, 246, .08);
+}
+
+.combo.link {
+    background: #fff;
+    color: #0b76f6;
+    border: 2px solid #0b76f6;
+}
