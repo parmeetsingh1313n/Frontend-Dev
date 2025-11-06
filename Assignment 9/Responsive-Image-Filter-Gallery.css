@@ -1,0 +1,71 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 20px;
+    background: #f7f7f7;
+}
+
+.gallery {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Each figure holds image + caption */
+figure {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 8px;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter .4s ease;
+}
+
+/* Different filters (examples) */
+figure:nth-child(1) img {
+    filter: blur(2px);
+}
+
+figure:nth-child(2) img {
+    filter: grayscale(100%);
+}
+
+figure:nth-child(3) img {
+    filter: sepia(60%);
+}
+
+figure:nth-child(4) img {
+    filter: brightness(70%);
+}
+
+figure:nth-child(5) img {
+    filter: contrast(120%);
+}
+
+figure:nth-child(6) img {
+    filter: hue-rotate(90deg);
+}
+
+/* On hover remove filter */
+figure:hover img {
+    filter: none;
+}
+
+/* caption */
+figcaption {
+    padding: 8px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+@media (max-width:600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,60 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 30px;
+    background: #f4f6f8;
+}
+
+.profiles {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.profile {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    width: 300px;
+    transform: translateY(0);
+    animation: fadeIn .6s ease both;
+    transition: transform .25s ease;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
+}
+
+.profile img {
+    width: 100%;
+    border-radius: 8px;
+    filter: grayscale(100%);
+    transition: filter .3s ease;
+}
+
+.profile:hover img {
+    filter: none;
+}
+
+.profile:hover {
+    transform: translateY(-10px);
+}
+
+/* Fade-in on loading... */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stack vertically on small screens */
+@media(max-width:800px) {
+    .profiles {
+        flex-direction: column;
+        align-items: center;
+    }
+}

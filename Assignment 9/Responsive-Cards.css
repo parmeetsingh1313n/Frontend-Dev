@@ -1,0 +1,43 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 20px;
+    background: #f6f6f6;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 220px;
+    min-width: 200px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .06);
+    transition: background .25s, transform .2s;
+}
+
+.card:hover {
+    background: #eef7ff;
+}
+
+/* Desktop:-- 4 columns handled by flex + min-width*/
+
+/* Tablet:-- 2 columns */
+@media(max-width:900px) {
+    .card {
+        flex: 1 1 45%;
+    }
+}
+
+/* Mobile:-- 1 column */
+@media(max-width:600px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}

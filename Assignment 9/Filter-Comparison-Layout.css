@@ -1,0 +1,42 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 20px;
+    background: #fafafa;
+}
+
+.compare {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.compare figure {
+    width: 48%;
+    background: #fff;
+    border-radius: 8px;
+    padding: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.filtered img {
+    filter: brightness(0.7);
+    transition: filter .35s ease;
+}
+
+.filtered:hover img {
+    filter: none;
+}
+
+/* stack under 700px */
+@media(max-width:700px) {
+    .compare {
+        flex-direction: column;
+    }
+
+    .compare figure {
+        width: 100%;
+    }
+}

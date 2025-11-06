@@ -1,0 +1,29 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 20px;
+}
+
+.principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.box {
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    transition: background .2s, color .2s;
+}
+
+.box:hover {
+    background: linear-gradient(90deg, #0b76f6, #74b9ff);
+    color: #fff;
+}
+
+@media(max-width:600px) {
+    .principles {
+        grid-template-columns: 1fr;
+    }
+}

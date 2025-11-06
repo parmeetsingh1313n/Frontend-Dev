@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: #0b76f6;
+    color: #fff;
+}
+
+.main-nav a {
+    color: #fff;
+    margin-left: 12px;
+    text-decoration: none;
+}
+
+/* Features row */
+.features {
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    justify-content: center;
+}
+
+.feature {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform .25s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .06);
+}
+
+.feature:hover {
+    transform: scale(1.03);
+}
+
+.site-footer {
+    text-align: center;
+    padding: 14px;
+    background: #eee;
+    margin-top: 20px;
+}
+
+/* Stack features vertically under 750px */
+@media (max-width:750px) {
+    .features {
+        flex-direction: column;
+        padding: 16px;
+    }
+}

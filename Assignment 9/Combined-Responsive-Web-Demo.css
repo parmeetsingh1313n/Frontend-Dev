@@ -1,0 +1,53 @@
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background: #0b76f6;
+    color: #fff;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 20px;
+}
+
+.grid section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: opacity .3s, transform .3s;
+    animation: fade .5s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 12px;
+    background: #f1f1f1;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* stack below 700px */
+@media(max-width:700px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

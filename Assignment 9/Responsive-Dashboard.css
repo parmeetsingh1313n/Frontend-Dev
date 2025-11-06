@@ -1,0 +1,67 @@
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "sidebar header" "sidebar main";
+}
+
+.dash-header {
+    grid-area: header;
+    background: #0b76f6;
+    color: #fff;
+    padding: 16px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #f4f6f8;
+    padding: 16px;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    gap: 16px;
+    padding: 16px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    transition: transform .2s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    animation: fade .5s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* on small screens put sidebar on top */
+@media(max-width:750px) {
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "sidebar" "main";
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+    }
+}
