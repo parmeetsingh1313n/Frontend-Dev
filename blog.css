@@ -1,0 +1,16 @@
+:root {
+    --bs-primary: #00bfa6;
+    --bs-font-sans-serif: 'Montserrat', sans-serif;
+}
+
+.custom-bg {
+    background: #00bfa6;
+}
+
+.blog-card {
+    transition: 0.25s;
+}
+
+.blog-card:hover {
+    transform: translateY(-4px);
+}

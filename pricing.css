@@ -1,0 +1,8 @@
+.plan {
+    transition: .3s ease;
+}
+
+.plan:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, .2);
+}
