@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Task 1 — Product List Manager</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 16px;
+        }
+
+        #productInput {
+            width: 300px;
+            padding: 6px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 12px;
+        }
+
+        li {
+            padding: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .actions button {
+            margin-left: 6px;
+        }
+
+        .editing input {
+            width: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Product Manager</h2>
+    <input id="productInput" placeholder="Add product name..." />
+    <button id="addBtn">Add</button>
+    <ul id="products"></ul>
+
+    <script>
+        // Elements
+        const input = document.getElementById('productInput');
+        const addBtn = document.getElementById('addBtn');
+        const list = document.getElementById('products');
+
+        // Add product
+        addBtn.addEventListener('click', () => {
+            const name = input.value.trim();
+            if (!name) return;
+            const li = createItem(name);
+            list.appendChild(li);
+            input.value = '';
+        });
+
+        function createItem(name) {
+            const li = document.createElement('li');
+            li.dataset.name = name;
+
+            const text = document.createElement('span');
+            text.textContent = name;
+
+            const actions = document.createElement('div');
+            actions.className = 'actions';
+
+            const edit = document.createElement('button'); edit.textContent = 'Edit';
+            const del = document.createElement('button'); del.textContent = 'Delete';
+
+            actions.appendChild(edit);
+            actions.appendChild(del);
+
+            li.appendChild(text);
+            li.appendChild(actions);
+            return li;
+        }
+
+       
+        list.addEventListener('click', (e) => {
+            const li = e.target.closest('li');
+            if (!li) return;
+            if (e.target.textContent === 'Delete') {
+                li.remove();
+                return;
+            }
+            if (e.target.textContent === 'Edit') {
+                enterEditMode(li);
+                return;
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            const editing = list.querySelector('.editing');
+            if (!editing) return;
+            if (!editing.contains(e.target) && e.target !== editing) {
+                saveEdit(editing);
+            }
+        });
+
+        // Allow inline editing
+        function enterEditMode(li) {
+            if (li.classList.contains('editing')) return;
+            li.classList.add('editing');
+            const oldText = li.querySelector('span').textContent;
+            li.innerHTML = `
+      <input type="text" value="${oldText}" />
+      <div class="actions">
+        <button class="save">Save</button>
+        <button class="cancel">Cancel</button>
+      </div>
+    `;
+            const inputField = li.querySelector('input');
+            inputField.focus();
+            // handlers for save/cancel
+            li.querySelector('.save').addEventListener('click', () => saveEdit(li));
+            li.querySelector('.cancel').addEventListener('click', () => cancelEdit(li, oldText));
+            // save on Enter, cancel on Escape
+            inputField.addEventListener('keydown', (ev) => {
+                if (ev.key === 'Enter') saveEdit(li);
+                if (ev.key === 'Escape') cancelEdit(li, oldText);
+            });
+        }
+
+        function saveEdit(li) {
+            const newVal = li.querySelector('input').value.trim();
+            if (!newVal) { li.remove(); return; }
+            li.classList.remove('editing');
+            li.innerHTML = '';
+            li.appendChild(Object.assign(document.createElement('span'), { textContent: newVal }));
+            const actions = document.createElement('div'); actions.className = 'actions';
+            const edit = document.createElement('button'); edit.textContent = 'Edit';
+            const del = document.createElement('button'); del.textContent = 'Delete';
+            actions.appendChild(edit); actions.appendChild(del);
+            li.appendChild(actions);
+        }
+
+        function cancelEdit(li, oldText) {
+            li.classList.remove('editing');
+            li.innerHTML = '';
+            li.appendChild(Object.assign(document.createElement('span'), { textContent: oldText }));
+            const actions = document.createElement('div'); actions.className = 'actions';
+            const edit = document.createElement('button'); edit.textContent = 'Edit';
+            const del = document.createElement('button'); del.textContent = 'Delete';
+            actions.appendChild(edit); actions.appendChild(del);
+            li.appendChild(actions);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Task 2 — Char Counter</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 16px
+        }
+
+        textarea {
+            width: 400px;
+            height: 120px;
+            padding: 8px
+        }
+
+        .counter {
+            margin-top: 8px;
+            font-weight: bold;
+            padding: 4px;
+            border-radius: 4px;
+            display: inline-block
+        }
+
+        .ok {
+            background: #dff0d8;
+            color: #2b7a2b
+        }
+
+        .warn {
+            background: #fff3cd;
+            color: #856404
+        }
+
+        .bad {
+            background: #f8d7da;
+            color: #721c24
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Character Counter (maxi 100)</h2>
+    <textarea id="ta" maxlength="200"></textarea><br>
+    <span id="counter" class="counter ok">100</span>
+    <button id="resetBtn">Reset</button>
+
+    <script>
+        const ta = document.getElementById('ta');
+        const counter = document.getElementById('counter');
+        const reset = document.getElementById('resetBtn');
+        const MAX = 100;
+
+        function updateCounter(e) {
+            const remaining = MAX - ta.value.length;
+            counter.textContent = remaining;
+            counter.className = 'counter';
+            if (remaining <= 0) counter.classList.add('bad');
+            else if (remaining <= 20) counter.classList.add('warn');
+            else counter.classList.add('ok');
+        }
+
+        ta.addEventListener('keydown', (ev) => {
+            const remaining = MAX - ta.value.length;
+            // allow backspace and navigation keys even when 0
+            const allowed = ['Backspace', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Delete', 'Home', 'End', 'Tab'];
+            if (remaining <= 0 && !allowed.includes(ev.key)) {
+                ev.preventDefault();
+            }
+        });
+
+        // also prevent paste that would exceed limit
+        ta.addEventListener('paste', (ev) => {
+            const paste = (ev.clipboardData || window.clipboardData).getData('text');
+            if (ta.value.length + paste.length > MAX) ev.preventDefault();
+        });
+
+        ta.addEventListener('input', updateCounter);
+        reset.addEventListener('click', () => { ta.value = ''; updateCounter(); });
+
+        updateCounter();
+    </script>
+</body>
+
+</html>

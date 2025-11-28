@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Task 3 — Multi-Step Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 16px
+        }
+
+        .step {
+            display: none
+        }
+
+        .step.active {
+            display: block
+        }
+
+        .controls {
+            margin-top: 12px
+        }
+
+        .error {
+            color: #b00;
+            font-size: 0.9rem
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Multi-Step Form</h2>
+    <form id="msForm" onsubmit="return false">
+        <div class="step active" data-step="1">
+            <label>Name: <input id="name" required /></label>
+            <div id="err1" class="error"></div>
+        </div>
+        <div class="step" data-step="2">
+            <label>Email: <input id="email" required /></label>
+            <div id="err2" class="error"></div>
+        </div>
+        <div class="step" data-step="3">
+            <label>Password: <input id="password" type="password" required /></label>
+            <div id="err3" class="error"></div>
+        </div>
+
+        <div class="controls">
+            <button id="back" disabled>Back</button>
+            <button id="next">Next</button>
+        </div>
+    </form>
+
+    <div id="summary" style="display:none;margin-top:12px"></div>
+
+    <script>
+        const steps = Array.from(document.querySelectorAll('.step'));
+        const back = document.getElementById('back');
+        const next = document.getElementById('next');
+        let current = 0;
+
+        function showStep(i) {
+            steps.forEach((s, idx) => s.classList.toggle('active', idx === i));
+            back.disabled = i === 0;
+            next.textContent = i === steps.length - 1 ? 'Finish' : 'Next';
+        }
+
+        function validateStep(i) {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const pass = document.getElementById('password').value;
+            if (i === 0) {
+                if (!/^[A-Za-z ]{2,}$/.test(name)) { document.getElementById('err1').textContent = 'Enter a valid name'; return false; }
+                document.getElementById('err1').textContent = ''; return true;
+            }
+            if (i === 1) {
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { document.getElementById('err2').textContent = 'Enter a valid email'; return false; }
+                document.getElementById('err2').textContent = ''; return true;
+            }
+            if (i === 2) {
+                if (pass.length < 6) { document.getElementById('err3').textContent = 'Password min 6 chars'; return false; }
+                document.getElementById('err3').textContent = ''; return true;
+            }
+        }
+
+        next.addEventListener('click', () => {
+            if (!validateStep(current)) return;
+            if (current < steps.length - 1) {
+                current++;
+                showStep(current);
+            } 
+            else {
+                document.getElementById('msForm').style.display = 'none';
+                const summary = document.getElementById('summary');
+                summary.style.display = 'block';
+                summary.innerHTML = `<h3>Summary</h3>
+        <p>Name: ${document.getElementById('name').value}</p>
+        <p>Email: ${document.getElementById('email').value}</p>`;
+                next.disabled = true;
+                back.disabled = true;
+            }
+        });
+
+        back.addEventListener('click', () => {
+            if (current > 0) { current--; showStep(current); }
+        });
+
+        document.getElementById('msForm').addEventListener('input', () => validateStep(current));
+
+        showStep(0);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Task 7 — Mouse Tracker</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 16px
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            border: 2px dashed #888;
+            position: relative
+        }
+
+        .coords {
+            margin-top: 8px
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: red;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%)
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Mouse Path Tracker</h2>
+    <div class="box" id="box"></div>
+    <div class="coords" id="coords">Move inside the box...</div>
+
+    <script>
+        const box = document.getElementById('box');
+        const coords = document.getElementById('coords');
+
+        box.addEventListener('mousemove', (e) => {
+            const rect = box.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            coords.textContent = `clientX: ${Math.round(x)}, clientY: ${Math.round(y)}`;
+        });
+
+        box.addEventListener('dblclick', (e) => {
+            const rect = box.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const dot = document.createElement('div'); dot.className = 'dot';
+            dot.style.left = x + 'px'; dot.style.top = y + 'px';
+            box.appendChild(dot);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Task 9 — Form Validation</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 16px
+        }
+
+        .field {
+            margin-bottom: 8px
+        }
+
+        .error {
+            color: #b00;
+            font-size: 0.9rem
+        }
+
+        .success {
+            color: green;
+            margin-top: 12px
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Registration Form</h2>
+    <form id="form">
+        <div class="field">
+            <label>Name: <input id="name" /></label>
+            <div class="error" id="eName"></div>
+        </div>
+        <div class="field">
+            <label>Email: <input id="email" /></label>
+            <div class="error" id="eEmail"></div>
+        </div>
+        <div class="field">
+            <label>Password: <input id="password" type="password" /></label>
+            <div class="error" id="ePass"></div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="msg" class="success" style="display:none">Form Submitted Successfully</div>
+
+    <script>
+        const form = document.getElementById('form');
+        const nameF = document.getElementById('name');
+        const emailF = document.getElementById('email');
+        const passF = document.getElementById('password');
+
+        const eName = document.getElementById('eName');
+        const eEmail = document.getElementById('eEmail');
+        const ePass = document.getElementById('ePass');
+        const msg = document.getElementById('msg');
+
+        function validate() {
+            let ok = true;
+            if (!nameF.value.trim()) { eName.textContent = 'Name is required'; ok = false; } else eName.textContent = '';
+            
+            if (!emailF.value.includes('@')) { eEmail.textContent = 'Enter valid email'; ok = false; } else eEmail.textContent = '';
+
+            if (passF.value.length < 6) { ePass.textContent = 'Password must be 6+ chars'; ok = false; } else ePass.textContent = '';
+            return ok;
+        }
+
+        [nameF, emailF, passF].forEach(el => el.addEventListener('input', () => {
+            validate();
+            msg.style.display = 'none';
+        }));
+
+        form.addEventListener('submit', (ev) => {
+            ev.preventDefault(); // block actual submission
+            const ok = validate();
+            if (ok) {
+                msg.style.display = 'block';
+
+            } 
+            else {
+                msg.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
