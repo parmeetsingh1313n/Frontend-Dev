@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Q6 — Subscription Panel</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px
+        }
+
+        .topic {
+            padding: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 6px
+        }
+
+        .success {
+            color: green;
+            margin-top: 8px
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>Subscriptions</h2>
+        <div id="topics">
+            <div class="topic">News <button class="sub">Subscribe</button> <button class="unsub">Unsubscribe</button>
+            </div>
+            <div class="topic">Events <button class="sub">Subscribe</button> <button class="unsub">Unsubscribe</button>
+            </div>
+            <div class="topic">Offers <button class="sub">Subscribe</button> <button class="unsub">Unsubscribe</button>
+            </div>
+        </div>
+        <input id="newTopic" placeholder="New topic" />
+        <button id="addTopic">Add Topic</button>
+        <div id="msg" class="success" style="display:none"></div>
+    </main>
+
+    <script src="q6_subscribe.js"></script>
+</body>
+</html>

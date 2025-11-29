@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Q5 — Team Directory</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px
+        }
+
+        .department {
+            border: 1px solid #ddd;
+            padding: 12px;
+            margin-bottom: 10px
+        }
+
+        .manager {
+            font-weight: bold;
+            cursor: pointer
+        }
+
+        .employee {
+            padding: 6px;
+            margin-left: 14px;
+            cursor: default
+        }
+
+        .highlight {
+            background: #e6f7ff
+        }
+
+        .contact {
+            display: none;
+            font-size: 0.9rem;
+            color: #333;
+            margin-left: 8px
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>Team Directory</h2>
+
+        <div class="department" data-dept="Tech">
+            <div class="manager">Manager: Rohan</div>
+            <div class="members">
+                <div class="employee">Amit <span class="contact">amit@company.com</span></div>
+                <div class="employee">Neha <span class="contact">neha@company.com</span></div>
+                <div class="employee">Kiran <span class="contact">kiran@company.com</span></div>
+            </div>
+        </div>
+
+        <div class="department" data-dept="Design">
+            <div class="manager">Manager: Priya</div>
+            <div class="members">
+                <div class="employee">Sara <span class="contact">sara@company.com</span></div>
+                <div class="employee">Lata <span class="contact">lata@company.com</span></div>
+            </div>
+        </div>
+
+        <button id="randomBtn">Select Random Employee</button>
+        <button id="toggleTeamsBtn">Collapse/Expand Teams</button>
+    </main>
+
+    <script src="q5_team.js"></script>
+</body>
+
+</html>

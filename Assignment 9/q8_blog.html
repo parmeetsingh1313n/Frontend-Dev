@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Q8 — Blog Admin</title>
+    <script src="https:--//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px
+        }
+
+        .post {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 6px
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eef;
+            padding: 2px 6px;
+            margin-right: 6px;
+            border-radius: 4px
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>Blog Posts</h2>
+        <div>
+            <button id="addPost">Add New Post</button>
+            <button id="prependPost">Prepend Featured</button>
+            <button id="removeLast">Remove Last Post</button>
+        </div>
+        <section id="posts">
+            <article class="post">Post 1:-- Intro to JS</article>
+            <article class="post">Post 2:-- CSS Tips</article>
+            <article class="post">Post 3:-- Web Accessibility</article>
+            <article class="post">Post 4:-- Performance</article>
+            <article class="post">Post 5:-- Testing</article>
+        </section>
+    </main>
+
+    <script src="q8_blog.js"></script>
+</body>
+
+</html>
