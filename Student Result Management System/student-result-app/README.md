@@ -1,4 +1,4 @@
-🎓 EduTrack - Student Results Management System
+## 🎓 EduTrack - Student Results Management System
 A modern, responsive React application for managing student academic records with beautiful UI and full CRUD functionality.
 
 https://img.shields.io/badge/React-18.2.0-blue
@@ -6,8 +6,8 @@ https://img.shields.io/badge/Vite-5.0.0-purple
 https://img.shields.io/badge/JSON_Server-0.17.4-green
 https://img.shields.io/badge/License-MIT-yellow
 
-✨ Features
-🎯 Core Functionality
+##✨ Features
+#🎯 Core Functionality
 📝 Add Students - Complete student profiles with academic details
 
 👀 View Students - Beautiful list view with performance metrics
