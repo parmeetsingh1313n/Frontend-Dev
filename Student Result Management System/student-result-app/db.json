@@ -1,0 +1,169 @@
+{
+    "students": [
+        {
+            "id": 1,
+            "name": "Parmeet Singh",
+            "section": "A",
+            "marks": 92,
+            "grade": "A",
+            "email": "parmeet.singh@gla.ac.in",
+            "phone": "+91-9876543210",
+            "attendance": 94,
+            "enrollmentDate": "2023-09-01"
+        },
+        {
+            "id": 2,
+            "name": "Arjun Sharma",
+            "section": "B",
+            "marks": 85,
+            "grade": "B",
+            "email": "arjun.sharma@gla.ac.in",
+            "phone": "+91-9876543211",
+            "attendance": 88,
+            "enrollmentDate": "2023-09-01"
+        },
+        {
+            "id": 3,
+            "name": "Shivanshu Patel",
+            "section": "C",
+            "marks": 78,
+            "grade": "C",
+            "email": "shivanshu.patel@gla.ac.in",
+            "phone": "+91-9876543212",
+            "attendance": 82,
+            "enrollmentDate": "2023-09-01"
+        },
+        {
+            "id": 4,
+            "name": "Priya Gupta",
+            "section": "A",
+            "marks": 95,
+            "grade": "A",
+            "email": "priya.gupta@gla.ac.in",
+            "phone": "+91-9876543213",
+            "attendance": 96,
+            "enrollmentDate": "2023-09-01"
+        },
+        {
+            "id": 5,
+            "name": "Rahul Kumar",
+            "section": "D",
+            "marks": 65,
+            "grade": "D",
+            "email": "rahul.kumar@gla.ac.in",
+            "phone": "+91-9876543214",
+            "attendance": 75,
+            "enrollmentDate": "2023-09-01"
+        },
+        {
+            "id": 6,
+            "name": "Anjali Mishra",
+            "section": "B",
+            "marks": 88,
+            "grade": "B",
+            "email": "anjali.mishra@gla.ac.in",
+            "phone": "+91-9876543215",
+            "attendance": 90,
+            "enrollmentDate": "2023-09-01"
+        },
+        {
+            "id": 7,
+            "name": "Vikram Joshi",
+            "section": "C",
+            "marks": 72,
+            "grade": "C",
+            "email": "vikram.joshi@gla.ac.in",
+            "phone": "+91-9876543216",
+            "attendance": 80,
+            "enrollmentDate": "2023-09-01"
+        },
+        {
+            "id": 8,
+            "name": "Neha Reddy",
+            "section": "A",
+            "marks": 91,
+            "grade": "A",
+            "email": "neha.reddy@gla.ac.in",
+            "phone": "+91-9876543217",
+            "attendance": 92,
+            "enrollmentDate": "2023-09-01"
+        },
+        {
+            "id": 9,
+            "name": "Raj Malhotra",
+            "section": "D",
+            "marks": 58,
+            "grade": "F",
+            "email": "raj.malhotra@gla.ac.in",
+            "phone": "+91-9876543218",
+            "attendance": 68,
+            "enrollmentDate": "2023-09-01"
+        },
+        {
+            "id": 10,
+            "name": "Sneha Iyer",
+            "section": "B",
+            "marks": 82,
+            "grade": "B",
+            "email": "sneha.iyer@gla.ac.in",
+            "phone": "+91-9876543219",
+            "attendance": 85,
+            "enrollmentDate": "2023-09-01"
+        },
+        {
+            "id": 11,
+            "name": "Amit Verma",
+            "section": "C",
+            "marks": 76,
+            "grade": "C",
+            "email": "amit.verma@gla.ac.in",
+            "phone": "+91-9876543220",
+            "attendance": 79,
+            "enrollmentDate": "2023-09-01"
+        },
+        {
+            "id": 12,
+            "name": "Pooja Chatterjee",
+            "section": "A",
+            "marks": 89,
+            "grade": "B",
+            "email": "pooja.chatterjee@gla.ac.in",
+            "phone": "+91-9876543221",
+            "attendance": 91,
+            "enrollmentDate": "2023-09-01"
+        },
+        {
+            "id": 13,
+            "name": "Deepak Nair",
+            "section": "D",
+            "marks": 69,
+            "grade": "D",
+            "email": "deepak.nair@gla.ac.in",
+            "phone": "+91-9876543222",
+            "attendance": 72,
+            "enrollmentDate": "2023-09-01"
+        },
+        {
+            "id": 14,
+            "name": "Kavita Desai",
+            "section": "B",
+            "marks": 94,
+            "grade": "A",
+            "email": "kavita.desai@gla.ac.in",
+            "phone": "+91-9876543223",
+            "attendance": 95,
+            "enrollmentDate": "2023-09-01"
+        },
+        {
+            "id": 15,
+            "name": "Sanjay Mehta",
+            "section": "C",
+            "marks": 81,
+            "grade": "B",
+            "email": "sanjay.mehta@gla.ac.in",
+            "phone": "+91-9876543224",
+            "attendance": 84,
+            "enrollmentDate": "2023-09-01"
+        }
+    ]
+}
