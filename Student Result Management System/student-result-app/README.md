@@ -8,17 +8,17 @@ https://img.shields.io/badge/License-MIT-yellow
 
 ##✨ Features
 #🎯 Core Functionality
-📝 Add Students - Complete student profiles with academic details
+#📝 Add Students - Complete student profiles with academic details
 
-👀 View Students - Beautiful list view with performance metrics
+#👀 View Students - Beautiful list view with performance metrics
 
-✏️ Edit Students - Update student information seamlessly
+#✏️ Edit Students - Update student information seamlessly
 
-🗑️ Delete Students - Remove student records with confirmation
+#🗑️ Delete Students - Remove student records with confirmation
 
-📊 View Details - Comprehensive student performance analytics
+#📊 View Details - Comprehensive student performance analytics
 
-🎨 User Experience
+#🎨 User Experience
 Modern Glass Morphism UI with stunning gradient backgrounds
 
 Responsive Design that works on all devices
@@ -31,7 +31,7 @@ Outfit Google Font for excellent readability
 
 Real-time Performance Charts and analytics
 
-📊 Academic Features
+#📊 Academic Features
 Automatic Grade Calculation based on marks
 
 Performance Analytics with visual progress bars
@@ -42,7 +42,7 @@ Academic Recommendations based on performance
 
 Section-wise Organization (A, B, C, D)
 
-🛠 Technology Stack
+#🛠 Technology Stack
 Frontend: React 18 + Vite
 
 Backend: JSON Server (REST API)
@@ -55,7 +55,7 @@ Font: Outfit (Google Fonts)
 
 Build Tool: Vite
 
-🚀 Quick Start
+##🚀 Quick Start
 Prerequisites
 Node.js (v16 or higher)
 
@@ -88,7 +88,7 @@ Runs on: http://localhost:5173
 Access the application
 Open your browser and navigate to: http://localhost:5173
 
-📁 Project Structure
+##📁 Project Structure
 text
 student-result-app/
 ├── db.json                 # JSON Server database
@@ -104,7 +104,7 @@ student-result-app/
 │   └── main.jsx           # React entry point
 ├── package.json           # Project dependencies
 └── index.html            # HTML template
-🎮 How to Use
+#🎮 How to Use
 Loading Students
 Click the "Load Students" button to fetch data from the server
 
@@ -156,7 +156,7 @@ Click the 🗑️ Delete button on any student row
 
 Confirm deletion in the popup dialog
 
-🎨 UI/UX Highlights
+##🎨 UI/UX Highlights
 Design System
 Color Palette: Beautiful cyan, aqua, and light blue gradients
 
@@ -166,14 +166,14 @@ Icons: Remix Icons for consistent visual language
 
 Effects: Glass morphism, smooth animations, hover states
 
-Responsive Design
+##Responsive Design
 Desktop: Full-featured table view with all columns
 
 Tablet: Optimized layout with adjusted spacing
 
 Mobile: Stacked cards for easy touch interaction
 
-🔧 API Endpoints
+##🔧 API Endpoints
 The JSON Server provides these REST endpoints:
 
 GET /students - Fetch all students
@@ -186,7 +186,7 @@ PUT /students/:id - Update student
 
 DELETE /students/:id - Delete student
 
-📊 Sample Data
+##📊 Sample Data
 The application comes with 15 sample Indian students featuring:
 
 Authentic Indian names (Parmeet, Arjun, Shivanshu, etc.)
@@ -197,7 +197,7 @@ Realistic academic performance data
 
 Balanced distribution across sections and grades
 
-🚀 Available Scripts
+##🚀 Available Scripts
 bash
 npm run dev          # Start development server
 npm run server       # Start JSON Server backend
@@ -220,7 +220,7 @@ Update color schemes, spacing, or animations
 
 Customize component-specific styles
 
-🤝 Contributing
+##🤝 Contributing
 Fork the project
 
 Create your feature branch (git checkout -b feature/AmazingFeature)
@@ -231,10 +231,10 @@ Push to the branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
 
-📝 License
+##📝 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-🙏 Acknowledgments
+##🙏 Acknowledgments
 React Team for the amazing framework
 
 Vite for fast development experience
