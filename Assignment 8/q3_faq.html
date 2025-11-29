@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Q3 — Interactive FAQ</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px
+        }
+
+        .qa {
+            border-bottom: 1px solid #ddd;
+            padding: 8px 0
+        }
+
+        .question {
+            font-weight: bold;
+            cursor: pointer
+        }
+
+        .answer {
+            display: none;
+            margin-top: 6px
+        }
+
+        .focusHighlight {
+            background: #fff3cd
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>FAQ</h2>
+        <section id="faq">
+            <div class="qa">
+                <div class="question">Refund policy?</div>
+                <div class="answer">30-day refund.</div>
+            </div>
+            <div class="qa">
+                <div class="question">Contact support?</div>
+                <div class="answer">support@example.com</div>
+            </div>
+            <div class="qa">
+                <div class="question">International shipping?</div>
+                <div class="answer">Yes, available.</div>
+            </div>
+            <div class="qa">
+                <div class="question">Upgrade plan?</div>
+                <div class="answer">Go to settings.</div>
+            </div>
+            <div class="qa">
+                <div class="question">API docs?</div>
+                <div class="answer">See developer portal.</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="q3_faq.js"></script>
+</body>
+
+</html>

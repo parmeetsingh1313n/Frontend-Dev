@@ -1,0 +1,58 @@
+<!Discount html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Registration Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px
+        }
+
+        .field {
+            margin-bottom: 10px
+        }
+
+        .error {
+            color: #b00;
+            font-size: 0.9rem
+        }
+
+        .invalid {
+            border: 2px solid red
+        }
+
+        .success {
+            color: green;
+            margin-top: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>Register</h2>
+        <form id="regForm">
+            <div class="field">
+                <label>Name: <input id="name" name="name" /></label>
+                <div id="eName" class="error"></div>
+            </div>
+            <div class="field">
+                <label>Email: <input id="email" name="email" /></label>
+                <div id="eEmail" class="error"></div>
+            </div>
+            <div class="field">
+                <label>Password: <input id="password" type="password" name="password" /></label>
+                <div id="ePass" class="error"></div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="msg" class="success" style="display:none"></div>
+    </main>
+
+    <script src="q10_form.js"></script>
+</body>
+</html>

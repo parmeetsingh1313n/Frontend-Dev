@@ -1,0 +1,94 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Q2 — Product Highlight</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px
+        }
+
+        .grid {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .product {
+            width: 180px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            position: relative;
+            cursor: pointer
+        }
+
+        .product.selected {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+            background: #fffbe6
+        }
+
+        .fav {
+            position: absolute;
+            right: 6px;
+            top: 6px;
+            cursor: pointer
+        }
+
+        .details {
+            display: none;
+            font-size: 0.9rem;
+            margin-top: 8px
+        }
+
+        .out {
+            opacity: 0.5
+        }
+
+        .discounted {
+            border-color: green
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>Products</h2>
+        <div class="grid" id="productGrid">
+            <!-- five+ products -->
+            <div class="product" data-stock="5" data-discount="true">
+                <h4 class="title">Backpack</h4>
+                <div class="price">1500</div>
+                <div class="details">Waterproof, 20L capacity</div>
+            </div>
+            <div class="product" data-stock="0" data-discount="false">
+                <h4 class="title">Sunglasses</h4>
+                <div class="price">299</div>
+                <div class="details">Polarized lenses</div>
+            </div>
+            <div class="product" data-stock="3" data-discount="true">
+                <h4 class="title">Headphones</h4>
+                <div class="price">1200</div>
+                <div class="details">Noise-cancelling</div>
+            </div>
+            <div class="product" data-stock="10" data-discount="false">
+                <h4 class="title">Notebook</h4>
+                <div class="price">80</div>
+                <div class="details">Hardcover, 200 pages</div>
+            </div>
+            <div class="product" data-stock="1" data-discount="true">
+                <span class="fav">♡</span>
+                <h4 class="title">Smartwatch</h4>
+                <div class="price">2200</div>
+                <div class="details">Heart-rate monitor</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="q2_product.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Q4 — Special Offer Banner</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px
+        }
+
+        .banner {
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            background: #fdebd0;
+            display: none
+        }
+
+        .controls button {
+            margin-right: 6px;
+            margin-bottom: 8px
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>Special Offers</h2>
+        <div class="controls">
+            <button id="hideBtn">Hide (first 2)</button>
+            <button id="showBtn">Show All</button>
+            <button id="slideBtn">Slide Up/Down</button>
+            <button id="fadeBtn">Fade In/Out</button>
+        </div>
+
+        <section id="banners">
+            <div class="banner">Offer A - 10% off</div>
+            <div class="banner">Offer B - Free Shipping</div>
+            <div class="banner">Offer C - Buy 1 Get 1</div>
+            <div class="banner">Offer D - Student Discount</div>
+            <div class="banner">Offer E - Limited Deal</div>
+        </section>
+    </main>
+
+    <script src="q4_banner.js"></script>
+</body>
+
+</html>

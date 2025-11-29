@@ -1,0 +1,42 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Q1 — Welcome Greeting</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="q1_welcome.css" />
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px
+        }
+
+        .welcome {
+            padding: 18px;
+            border-radius: 8px;
+            background: #f0f8ff;
+            display: inline-block
+        }
+
+        button {
+            margin: 6px
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="welcome" aria-label="welcome section">
+            <h1 id="greetTitle">Welcome</h1>
+            <p id="greetMsg">Glad to see you here....</p>
+            <div>
+                <button id="changeGreetingBtn">Change Greeting</button>
+                <button id="toggleMsgBtn">Toggle Message</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="q1_welcome.js"></script>
+</body>
+
+</html>

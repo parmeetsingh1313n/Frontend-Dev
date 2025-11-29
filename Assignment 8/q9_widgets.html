@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Q9 — Multi-jQuery Widgets</title>
+
+    <!-- jQuery v1 -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        var jq1 = jQuery.noConflict(true); // save v1
+    </script>
+
+    <!-- jQuery v3 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        var jq3 = jQuery.noConflict(true); // save v3
+        window.$v1 = jq1;
+        window.$v3 = jq3;
+    </script>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px
+        }
+
+        .widget {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 8px
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>Multi-jQuery Widgets</h2>
+        <div id="carousel" class="widget">Carousel (v1)</div>
+        <div id="modalTrigger" class="widget">Modal Trigger (v3)</div>
+        <div id="widgetA" class="widget">Widget A (v1 active)</div>
+        <div id="widgetB" class="widget">Widget B (v3 tooltip)</div>
+    </main>
+
+    <script src="q9_widgets.js"></script>
+</body>
+
+</html>
