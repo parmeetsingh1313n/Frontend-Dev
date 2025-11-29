@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Q2 — Employee Dashboard</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 16px
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse
+        }
+
+        td,
+        th {
+            padding: 8px;
+            border: 1px solid #eee
+        }
+
+        .err {
+            color: #b00;
+            margin-top: 8px
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Employee Status Dashboard</h2>
+    <table id="tbl">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Toggle</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="err" class="err"></div>
+
+    <script src="q2.js"></script>
+</body>
+
+</html>

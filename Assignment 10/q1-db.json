@@ -1,0 +1,34 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Fjallraven Backpack",
+            "price": 109.95,
+            "image": "https://picsum.photos/seed/p1/120/80"
+        },
+        {
+            "id": 2,
+            "name": "Leather Wallet",
+            "price": 29.99,
+            "image": "https://picsum.photos/seed/p2/120/80"
+        },
+        {
+            "id": 3,
+            "name": "Running Shoes",
+            "price": 79.5,
+            "image": "https://picsum.photos/seed/p3/120/80"
+        },
+        {
+            "id": 4,
+            "name": "Sunglasses",
+            "price": 24.0,
+            "image": "https://picsum.photos/seed/p4/120/80"
+        },
+        {
+            "id": 5,
+            "name": "Bluetooth Speaker",
+            "price": 55.75,
+            "image": "https://picsum.photos/seed/p5/120/80"
+        }
+    ]
+}
